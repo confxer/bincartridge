@@ -1,0 +1,27 @@
+public void main(int[] ar) {
+  int[] array = {1,2,7,10,11};
+  int[] arr = new int[array.length];
+  int p = arr.length/2;
+  int n = 0;
+  for(int j = 0; j<array.length;j++){
+      int min = 9999;
+      int m = 0;
+      for(int i = 0; i<array.length; i++){
+          if(min>=array[i]){
+              min = array[i];
+          }
+      }
+      for(int i = 0; i< array.length; i++){
+          if(min == array[i]){
+              m = m + 1;
+              array[i] = 9999;
+          }
+      }
+      for(int i = 0; i<m;i++){
+          arr[n] = min;
+          n = n + 1;
+      }
+  }
+  int answer = arr[p];
+  System.out.println(answer);
+}
